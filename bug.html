@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrectly referencing an element before it's defined in the HTML structure.
+    document.getElementById("myDiv").innerHTML = "This is dynamically added content.";
+    var myElement = document.createElement("p");
+    myElement.textContent = "This is dynamically added paragraph.";
+    //Incorrect way of appending.  It needs to be appended to a parent node.
+    myElement; //This line is wrong, it should be appended to a parent element.
+  </script>
+</body>
+</html>
