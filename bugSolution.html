@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Correct way to dynamically add content:
+    // Wait for the DOM to be fully loaded
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById("myDiv").innerHTML = "This is dynamically added content.";
+      var myElement = document.createElement("p");
+      myElement.textContent = "This is dynamically added paragraph.";
+      //Correct way to append
+      document.body.appendChild(myElement);
+    });
+  </script>
+</body>
+</html>
